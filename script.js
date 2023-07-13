@@ -2,6 +2,7 @@ const agregarInput = document.getElementById("agregarInput");
 agregarInput.addEventListener("click", () => {
   // Obtener referencia al contenedor donde se agregarán los campos
   const contenedor = document.getElementById("contenedor");
+  console.log("se creo un input y el boton eliminar");
   
   // Crear un nuevo elemento de grupo (div)
   const Grupo = document.createElement("div");
@@ -17,12 +18,13 @@ agregarInput.addEventListener("click", () => {
   const button = document.createElement("button");
   button.type = "button";
   button.textContent = "Eliminar";
-  button.classListadd.add('btn btn-danger btn-sm');
+  
   
   // Agregar un evento de escucha al botón de eliminar
   button.addEventListener("click", () => {
     // Obtener el elemento de grupo padre del botón
     const Grupo = button.parentNode;
+    console.log("se elimino un input y el boton eliminar")
     
     // Obtener el contenedor y eliminar el grupo del contenedor
     const contenedor = document.getElementById("contenedor");
