@@ -12,8 +12,8 @@ agregarInput.addEventListener("click", () => {
   const input = document.createElement("input");
   input.type = "text";
   input.name = "input[]";
-  input.placeholder = "Ingresa un valor";
-  
+  input.placeholder = "Ingrese su nombres";
+
   // Crear un nuevo botón de eliminar (button)
   const button = document.createElement("button");
   button.type = "button";
@@ -30,6 +30,11 @@ agregarInput.addEventListener("click", () => {
     // Obtener el contenedor y eliminar el grupo del contenedor
     const contenedor = document.getElementById("contenedor");
     contenedor.removeChild(Grupo);
+  });
+
+  //agregar un evento al input para mostrar el contenido que se escribe.
+  input.addEventListener("input", (event) => {
+    console.log("Valor del campo de entrada:", event.target.value);
   });
 
    // Agregar los elementos al DOM
