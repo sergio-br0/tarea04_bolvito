@@ -18,6 +18,7 @@ agregarInput.addEventListener("click", () => {
   const button = document.createElement("button");
   button.type = "button";
   button.textContent = "Eliminar";
+  button.classList.add("btn", "btn-danger", "btn-sm");
   
   
   // Agregar un evento de escucha al botón de eliminar
