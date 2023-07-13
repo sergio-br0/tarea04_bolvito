@@ -36,3 +36,28 @@ agregarInput.addEventListener("click", () => {
    Grupo.appendChild(input);
    Grupo.appendChild(button);
  });
+
+ const form = document.getElementById("formulario");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Obtener referencia al formulario
+  const form = document.getElementById("formulario");
+
+  // Obtener todos los campos de entrada con el atributo name="input[]"
+  const inputs = form.querySelectorAll('input[name="input[]"]');
+
+  let isValid = true;
+
+  // Iterar sobre cada campo de entrada
+  inputs.forEach(input => {
+    // Verificar si el valor del campo está vacío después de recortar los espacios en blanco
+    if (input.value.trim() === "") {
+      isValid = false;
+      // Agregar la clase "error" al campo de entrada si está vacío
+      input.classList.add("error");
+    } else {
+      // Eliminar la clase "error" del campo de entrada si no está vacío
+      input.classList.remove("error");
+    }
+  });
