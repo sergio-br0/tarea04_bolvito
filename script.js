@@ -33,6 +33,16 @@ agregarInput.addEventListener("click", () => {
   });
 
   //agregar un evento al input para mostrar el contenido que se escribe.
+  // ...
+
+const inputPrincipal = document.querySelector('input[name="input[]"]');
+
+// Agregar un evento al input principal para mostrar el contenido que se escribe.
+inputPrincipal.addEventListener("input", (event) => {
+  console.log("Valor del campo de entrada principal:", event.target.value);
+});
+
+
   input.addEventListener("input", (event) => {
     console.log("Valor del campo de entrada:", event.target.value);
   });
