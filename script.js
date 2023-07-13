@@ -61,3 +61,13 @@ form.addEventListener("submit", (event) => {
       input.classList.remove("error");
     }
   });
+
+  if (isValid) {
+    // Mostrar una alerta indicando que el formulario es válido y se puede enviar
+    alert("Formulario válido. Se puede enviar.");
+    // Aquí puedes agregar el código para enviar el formulario si es válido
+  } else {
+    // Mostrar una alerta solicitando al usuario que complete todos los campos requeridos
+    alert("Por favor, complete todos los campos requeridos.");
+  }
+});
