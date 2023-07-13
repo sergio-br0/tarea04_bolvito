@@ -57,6 +57,7 @@ form.addEventListener("submit", (event) => {
       isValid = false;
       // Agregar la clase "error" al campo de entrada si está vacío
       input.classList.add("error");
+      
     } else {
       // Eliminar la clase "error" del campo de entrada si no está vacío
       input.classList.remove("error");
@@ -66,9 +67,11 @@ form.addEventListener("submit", (event) => {
   if (isValid) {
     // Mostrar una alerta indicando que el formulario es válido y se puede enviar
     alert("Formulario válido. Se puede enviar.");
+    console.log("El formulario se envio correctamente");
     // Aquí puedes agregar el código para enviar el formulario si es válido
   } else {
     // Mostrar una alerta solicitando al usuario que complete todos los campos requeridos
     alert("Por favor, complete todos los campos requeridos.");
+    console.log("Lleno todos los campos requeridos");
   }
 });
